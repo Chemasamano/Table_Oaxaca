@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
+#import <Twitter/Twitter.h>
 
 @interface HomeTable : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 //Buttons
@@ -20,6 +23,10 @@
 @property (strong, nonatomic) IBOutlet UITableView *tblMain;
 
 //Views
+
+//Actions
+- (IBAction)btnSharePressed:(id)sender;
+
 
 
 @end

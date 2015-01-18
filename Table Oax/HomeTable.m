@@ -122,36 +122,41 @@ UIAlertView     *alert;
     }
 }
 
-
-/*
- 
- UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alerta"
- message:NSLocalizedString(@"Message", nil)
- delegate:nil
- cancelButtonTitle:NSLocalizedString(@"OK", nil)
- otherButtonTitles:nil];
- [alert show];
- */
-
-/*
-NSString                    *initalTextString;
-NSArray                     *activityItems;
-UIImage                     *imageScreen;
-UIActivityViewController    *activityViewController;
-
-imageScreen = [UIImage imageNamed:@"Logo.png"];
-initalTextString = @"Hola desde mi clase de iOS en la UAG =)";
-
-activityItems = @[imageScreen, initalTextString];
-
-//Init activity view controller
-activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-
-activityViewController.excludedActivityTypes = [NSArray arrayWithObjects:UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeAirDrop, nil];
+- (IBAction)btnSharePressed:(id)sender
+{
+     NSString                    *strMsg;
+     NSArray                     *activityItems;
+     UIImage                     *imgShare;
+     UIActivityViewController    *actVC;
+     
+     imgShare = [UIImage imageNamed:@"chavo.png"];
+     strMsg = @"Hola desde mi clase de iOS de la UAG en Oaxaca =)";
+     
+     activityItems = @[imgShare, strMsg];
+     
+     //Init activity view controller
+     actVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+     actVC.excludedActivityTypes = [NSArray arrayWithObjects:UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeAirDrop, nil];
+     
+     [self presentViewController:actVC animated:YES completion:nil];
+}
 
 
 
-[self presentViewController:activityViewController animated:YES completion:nil];
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

@@ -20,6 +20,9 @@
 		D18253771A6C04C300777922 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18253761A6C04C300777922 /* Images.xcassets */; };
 		D182537A1A6C04C300777922 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D18253781A6C04C300777922 /* LaunchScreen.xib */; };
 		D18253861A6C04C300777922 /* Table_OaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D18253851A6C04C300777922 /* Table_OaxTests.m */; };
+		D1C04E0A1A6C3A1500A6C902 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C04E091A6C3A1500A6C902 /* Accounts.framework */; };
+		D1C04E0D1A6C3A2A00A6C902 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C04E0B1A6C3A2A00A6C902 /* Social.framework */; };
+		D1C04E0E1A6C3A2A00A6C902 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C04E0C1A6C3A2A00A6C902 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		D182537F1A6C04C300777922 /* Table OaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Table OaxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18253841A6C04C300777922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D18253851A6C04C300777922 /* Table_OaxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Table_OaxTests.m; sourceTree = "<group>"; };
+		D1C04E091A6C3A1500A6C902 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D1C04E0B1A6C3A2A00A6C902 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D1C04E0C1A6C3A2A00A6C902 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C04E0D1A6C3A2A00A6C902 /* Social.framework in Frameworks */,
+				D1C04E0E1A6C3A2A00A6C902 /* Twitter.framework in Frameworks */,
+				D1C04E0A1A6C3A1500A6C902 /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +106,9 @@
 		D182535D1A6C04C300777922 = {
 			isa = PBXGroup;
 			children = (
+				D1C04E0B1A6C3A2A00A6C902 /* Social.framework */,
+				D1C04E0C1A6C3A2A00A6C902 /* Twitter.framework */,
+				D1C04E091A6C3A1500A6C902 /* Accounts.framework */,
 				D17758E91A6C0EC6003A0635 /* Customized */,
 				D18253681A6C04C300777922 /* Table Oax */,
 				D18253821A6C04C300777922 /* Table OaxTests */,
