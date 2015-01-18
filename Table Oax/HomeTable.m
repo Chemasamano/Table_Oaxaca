@@ -39,7 +39,7 @@ NSMutableArray *maAge;
 
     maAge           =  [NSMutableArray arrayWithObjects: @"35", @"25", @"42", @"36", @"24", nil];
     
-    maImgs          =  [NSMutableArray arrayWithObjects: @"chavo.png", @"chilindrina.png", @"jamito.png", @"nono.png", @"clotilde.png", nil];
+    maImgs          =  [NSMutableArray arrayWithObjects: @"chavo.png", @"chilindrina.png", @"jaimito.png", @"nono.png", @"clotilde.png", nil];
     
     maRole          =  [NSMutableArray arrayWithObjects: @"Profesor Curso", @"Alumna Guapa", @"Amigo Estudioso", @"Alumno Travieso", @"Alumno Inteligente", nil];
 }
@@ -76,7 +76,7 @@ NSMutableArray *maAge;
     cell.lblRole.text       = maRole[indexPath.row];
     cell.lblAge.text        = maAge[indexPath.row];
     cell.imgUser.image      = [UIImage imageNamed:maImgs[indexPath.row]];
-    cell.imgUser.clipsToBounds = YES;
+    
     return cell;
 }
 
