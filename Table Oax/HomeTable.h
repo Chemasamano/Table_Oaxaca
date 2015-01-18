@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeTable : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface HomeTable : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 //Buttons
 
 //Images

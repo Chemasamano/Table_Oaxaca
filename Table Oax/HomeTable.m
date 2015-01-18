@@ -14,6 +14,8 @@ NSMutableArray *maImgs;
 NSMutableArray *maRole;
 NSMutableArray *maAge;
 
+UIAlertView     *alert;
+
 @interface HomeTable ()
 
 @end
@@ -90,14 +92,36 @@ NSMutableArray *maAge;
     
     if (indexPath.row == 2)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
+        alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
                                                         message:strTemp
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:@"Publica", nil];
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancelar"
+                                              otherButtonTitles:@"Guardar", @"Publicar", nil];
         [alert show];
     }
 }
+
+/**********************************************************************************************
+ Alert View Functions
+ **********************************************************************************************/
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"Alert buttons pressed");
+    
+    if(buttonIndex == 0)
+    {
+        NSLog(@"Cancelar");
+    }
+    else if(buttonIndex == 1)
+    {
+        NSLog(@"Guardar");
+    }
+    else if(buttonIndex == 2)
+    {
+        NSLog(@"Publicar");
+    }
+}
+
 
 /*
  
