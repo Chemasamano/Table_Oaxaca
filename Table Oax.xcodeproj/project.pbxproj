@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D17758EC1A6C1419003A0635 /* cellOaxaca.m in Sources */ = {isa = PBXBuildFile; fileRef = D17758EB1A6C1419003A0635 /* cellOaxaca.m */; };
+		D17758F31A6C1843003A0635 /* chavo.png in Resources */ = {isa = PBXBuildFile; fileRef = D17758EE1A6C1843003A0635 /* chavo.png */; };
+		D17758F41A6C1843003A0635 /* chilindrina.png in Resources */ = {isa = PBXBuildFile; fileRef = D17758EF1A6C1843003A0635 /* chilindrina.png */; };
+		D17758F51A6C1843003A0635 /* clotilde.png in Resources */ = {isa = PBXBuildFile; fileRef = D17758F01A6C1843003A0635 /* clotilde.png */; };
+		D17758F61A6C1843003A0635 /* jaimito.png in Resources */ = {isa = PBXBuildFile; fileRef = D17758F11A6C1843003A0635 /* jaimito.png */; };
+		D17758F71A6C1843003A0635 /* nono.png in Resources */ = {isa = PBXBuildFile; fileRef = D17758F21A6C1843003A0635 /* nono.png */; };
 		D182536C1A6C04C300777922 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D182536B1A6C04C300777922 /* main.m */; };
 		D182536F1A6C04C300777922 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D182536E1A6C04C300777922 /* AppDelegate.m */; };
 		D18253721A6C04C300777922 /* HomeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D18253711A6C04C300777922 /* HomeTable.m */; };
@@ -27,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D17758EA1A6C1419003A0635 /* cellOaxaca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellOaxaca.h; sourceTree = "<group>"; };
+		D17758EB1A6C1419003A0635 /* cellOaxaca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellOaxaca.m; sourceTree = "<group>"; };
+		D17758EE1A6C1843003A0635 /* chavo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chavo.png; sourceTree = "<group>"; };
+		D17758EF1A6C1843003A0635 /* chilindrina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chilindrina.png; sourceTree = "<group>"; };
+		D17758F01A6C1843003A0635 /* clotilde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clotilde.png; sourceTree = "<group>"; };
+		D17758F11A6C1843003A0635 /* jaimito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jaimito.png; sourceTree = "<group>"; };
+		D17758F21A6C1843003A0635 /* nono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nono.png; sourceTree = "<group>"; };
 		D18253661A6C04C300777922 /* Table Oax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Oax.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D182536A1A6C04C300777922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D182536B1A6C04C300777922 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,9 +73,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D17758E91A6C0EC6003A0635 /* Customized */ = {
+			isa = PBXGroup;
+			children = (
+				D17758EA1A6C1419003A0635 /* cellOaxaca.h */,
+				D17758EB1A6C1419003A0635 /* cellOaxaca.m */,
+			);
+			name = Customized;
+			sourceTree = "<group>";
+		};
+		D17758ED1A6C1843003A0635 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				D17758EE1A6C1843003A0635 /* chavo.png */,
+				D17758EF1A6C1843003A0635 /* chilindrina.png */,
+				D17758F01A6C1843003A0635 /* clotilde.png */,
+				D17758F11A6C1843003A0635 /* jaimito.png */,
+				D17758F21A6C1843003A0635 /* nono.png */,
+			);
+			path = imgs;
+			sourceTree = "<group>";
+		};
 		D182535D1A6C04C300777922 = {
 			isa = PBXGroup;
 			children = (
+				D17758E91A6C0EC6003A0635 /* Customized */,
 				D18253681A6C04C300777922 /* Table Oax */,
 				D18253821A6C04C300777922 /* Table OaxTests */,
 				D18253671A6C04C300777922 /* Products */,
@@ -81,6 +116,7 @@
 		D18253681A6C04C300777922 /* Table Oax */ = {
 			isa = PBXGroup;
 			children = (
+				D17758ED1A6C1843003A0635 /* imgs */,
 				D182536D1A6C04C300777922 /* AppDelegate.h */,
 				D182536E1A6C04C300777922 /* AppDelegate.m */,
 				D18253701A6C04C300777922 /* HomeTable.h */,
@@ -200,8 +236,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18253751A6C04C300777922 /* Main.storyboard in Resources */,
+				D17758F51A6C1843003A0635 /* clotilde.png in Resources */,
+				D17758F31A6C1843003A0635 /* chavo.png in Resources */,
 				D182537A1A6C04C300777922 /* LaunchScreen.xib in Resources */,
+				D17758F41A6C1843003A0635 /* chilindrina.png in Resources */,
+				D17758F71A6C1843003A0635 /* nono.png in Resources */,
 				D18253771A6C04C300777922 /* Images.xcassets in Resources */,
+				D17758F61A6C1843003A0635 /* jaimito.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17758EC1A6C1419003A0635 /* cellOaxaca.m in Sources */,
 				D18253721A6C04C300777922 /* HomeTable.m in Sources */,
 				D182536F1A6C04C300777922 /* AppDelegate.m in Sources */,
 				D182536C1A6C04C300777922 /* main.m in Sources */,

@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeTable : UIViewController
+@interface HomeTable : UIViewController<UITableViewDelegate, UITableViewDataSource>
+//Buttons
+
+//Images
+
+//Labels
+
+//Table
+@property (strong, nonatomic) IBOutlet UITableView *tblMain;
+
+//Views
 
 
 @end
