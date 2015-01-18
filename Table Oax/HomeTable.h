@@ -14,6 +14,7 @@
 //Images
 
 //Labels
+@property (strong, nonatomic) IBOutlet UILabel *lblSelectedName;
 
 //Table
 @property (strong, nonatomic) IBOutlet UITableView *tblMain;
