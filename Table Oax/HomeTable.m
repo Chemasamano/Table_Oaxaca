@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Smartplace. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomeTable.h"
 
-@interface ViewController ()
+@interface HomeTable ()
 
 @end
 
-@implementation ViewController
+@implementation HomeTable
 
 - (void)viewDidLoad {
     [super viewDidLoad];
