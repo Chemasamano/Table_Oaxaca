@@ -8,11 +8,16 @@
 
 #import "HomeTable.h"
 #import "cellOaxaca.h"
+#import "SBJson.h"
 
 NSMutableArray *maNames;
 NSMutableArray *maImgs;
 NSMutableArray *maRole;
 NSMutableArray *maAge;
+
+NSString        *userID;
+
+NSDictionary    *jsonResponse;
 
 UIAlertView     *alert;
 
@@ -28,6 +33,7 @@ UIAlertView     *alert;
     // Do any additional setup after loading the view, typically from a nib.
     
     [self initController];
+    [self postService];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +50,8 @@ UIAlertView     *alert;
     maImgs          =  [NSMutableArray arrayWithObjects: @"chavo.png", @"chilindrina.png", @"jaimito.png", @"nono.png", @"clotilde.png", nil];
     
     maRole          =  [NSMutableArray arrayWithObjects: @"Profesor Curso", @"Alumna Guapa", @"Amigo Estudioso", @"Alumno Travieso", @"Alumno Inteligente", nil];
+    
+    userID = @"1";
 }
 /**********************************************************************************************
  Table Functions
@@ -141,22 +149,73 @@ UIAlertView     *alert;
      [self presentViewController:actVC animated:YES completion:nil];
 }
 
+- (IBAction)btnRefreshPressed:(id)sender
+{
+    [self postService];
+    [self.tblMain reloadData];
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*******************************************************************************
+ Web Service
+ *******************************************************************************/
+//-------------------------------------------------------------------------------
+- (void) postService
+{
+    NSLog(@"postService");
+    NSOperationQueue *queue = [NSOperationQueue new];
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(loadService) object:nil];
+    [queue addOperation:operation];
+}
+//-------------------------------------------------------------------------------
+- (void) loadService
+{
+    @try
+    {
+        NSString *post = [[NSString alloc] initWithFormat:@"id=%@", userID];
+        NSLog(@"postService: %@",post);
+        NSURL *url = [NSURL URLWithString:@"http://ec2-54-69-246-127.us-west-2.compute.amazonaws.com/"];
+        NSLog(@"URL postService = %@", url);
+        NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+        NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:url];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:postData];
+        [NSURLRequest requestWithURL:url];
+        NSError *error = [[NSError alloc] init];
+        NSHTTPURLResponse *response = nil;
+        NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        //-------------------------------------------------------------------------------
+        if ([response statusCode] >=200 && [response statusCode] <300)
+        {
+            jsonResponse = [NSJSONSerialization JSONObjectWithData:urlData options:kNilOptions error:&error];
+        }
+        else
+        {
+            if (error)
+            {
+                NSLog(@"Error");
+                
+            }
+            else
+            {
+                NSLog(@"Conect Fail");
+            }
+        }
+        //-------------------------------------------------------------------------------
+    }
+    @catch (NSException * e)
+    {
+        NSLog(@"Exception");
+    }
+    //-------------------------------------------------------------------------------
+    NSLog(@"jsonResponse %@", jsonResponse);
+    maNames         = [jsonResponse valueForKey:@"Name"];
+    NSLog(@"maNames %@", maNames);
+    //[self.tblMain reloadData];
+}
 
 @end

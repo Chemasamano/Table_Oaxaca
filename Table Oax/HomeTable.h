@@ -26,6 +26,7 @@
 
 //Actions
 - (IBAction)btnSharePressed:(id)sender;
+- (IBAction)btnRefreshPressed:(id)sender;
 
 
 
