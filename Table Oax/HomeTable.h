@@ -10,8 +10,9 @@
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 #import <Twitter/Twitter.h>
+#import "GAITrackedViewController.h"
 
-@interface HomeTable : UIViewController<UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
+@interface HomeTable : GAITrackedViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 //Buttons
 
 //Images

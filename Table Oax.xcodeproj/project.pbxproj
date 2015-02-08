@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D12D76E11A87C15B00AF0E3D /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D12D76E01A87C15B00AF0E3D /* libGoogleAnalyticsServices.a */; };
+		D12D76E31A87C27400AF0E3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12D76E21A87C27400AF0E3D /* CoreData.framework */; };
+		D12D76E51A87C27F00AF0E3D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12D76E41A87C27F00AF0E3D /* SystemConfiguration.framework */; };
+		D12D76E71A87C2BD00AF0E3D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D12D76E61A87C2BD00AF0E3D /* libz.dylib */; };
 		D17758EC1A6C1419003A0635 /* cellOaxaca.m in Sources */ = {isa = PBXBuildFile; fileRef = D17758EB1A6C1419003A0635 /* cellOaxaca.m */; };
 		D17758F31A6C1843003A0635 /* chavo.png in Resources */ = {isa = PBXBuildFile; fileRef = D17758EE1A6C1843003A0635 /* chavo.png */; };
 		D17758F41A6C1843003A0635 /* chilindrina.png in Resources */ = {isa = PBXBuildFile; fileRef = D17758EF1A6C1843003A0635 /* chilindrina.png */; };
@@ -49,6 +53,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D12D76D71A87C15B00AF0E3D /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		D12D76D81A87C15B00AF0E3D /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		D12D76DC1A87C15B00AF0E3D /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		D12D76DD1A87C15B00AF0E3D /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		D12D76DE1A87C15B00AF0E3D /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		D12D76DF1A87C15B00AF0E3D /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		D12D76E01A87C15B00AF0E3D /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		D12D76E21A87C27400AF0E3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D12D76E41A87C27F00AF0E3D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D12D76E61A87C2BD00AF0E3D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D17758EA1A6C1419003A0635 /* cellOaxaca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellOaxaca.h; sourceTree = "<group>"; };
 		D17758EB1A6C1419003A0635 /* cellOaxaca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellOaxaca.m; sourceTree = "<group>"; };
 		D17758EE1A6C1843003A0635 /* chavo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chavo.png; sourceTree = "<group>"; };
@@ -105,9 +119,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12D76E71A87C2BD00AF0E3D /* libz.dylib in Frameworks */,
+				D12D76E51A87C27F00AF0E3D /* SystemConfiguration.framework in Frameworks */,
+				D12D76E31A87C27400AF0E3D /* CoreData.framework in Frameworks */,
 				D1B45F031A86A7BA00C95FD9 /* MobileCoreServices.framework in Frameworks */,
 				D1C04E0D1A6C3A2A00A6C902 /* Social.framework in Frameworks */,
 				D1C04E0E1A6C3A2A00A6C902 /* Twitter.framework in Frameworks */,
+				D12D76E11A87C15B00AF0E3D /* libGoogleAnalyticsServices.a in Frameworks */,
 				D1C04E0A1A6C3A1500A6C902 /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +140,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D12D76D61A87C15B00AF0E3D /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				D12D76D71A87C15B00AF0E3D /* GAI.h */,
+				D12D76D81A87C15B00AF0E3D /* GAIDictionaryBuilder.h */,
+				D12D76DC1A87C15B00AF0E3D /* GAIFields.h */,
+				D12D76DD1A87C15B00AF0E3D /* GAILogger.h */,
+				D12D76DE1A87C15B00AF0E3D /* GAITrackedViewController.h */,
+				D12D76DF1A87C15B00AF0E3D /* GAITracker.h */,
+				D12D76E01A87C15B00AF0E3D /* libGoogleAnalyticsServices.a */,
+			);
+			name = GoogleAnalytics;
+			path = "Table Oax/GoogleAnalytics";
+			sourceTree = "<group>";
+		};
 		D17758E91A6C0EC6003A0635 /* Customized */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +179,10 @@
 		D182535D1A6C04C300777922 = {
 			isa = PBXGroup;
 			children = (
+				D12D76E61A87C2BD00AF0E3D /* libz.dylib */,
+				D12D76E41A87C27F00AF0E3D /* SystemConfiguration.framework */,
+				D12D76E21A87C27400AF0E3D /* CoreData.framework */,
+				D12D76D61A87C15B00AF0E3D /* GoogleAnalytics */,
 				D1B45F021A86A7BA00C95FD9 /* MobileCoreServices.framework */,
 				D1C04E0B1A6C3A2A00A6C902 /* Social.framework */,
 				D1C04E0C1A6C3A2A00A6C902 /* Twitter.framework */,
@@ -486,6 +523,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Table Oax/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Table",
+					Oax/GoogleAnalytics,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -496,6 +538,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Table Oax/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Table",
+					Oax/GoogleAnalytics,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
